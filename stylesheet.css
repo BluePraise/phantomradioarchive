@@ -46,13 +46,16 @@ footer {}
 
 ul {
 	list-style: none;
-	padding: none;
-	margin: none;
+	padding: 0;
+	margin: 0;
 }
 
 ol {}
 
-li {}
+li {
+	border-top: 1px solid;
+  	padding: 30px 40px;
+}
 
 
 /*************************
@@ -120,6 +123,7 @@ video {}
 
 main {
 	width: 75%;
+  	border: 1px solid #000;
 }
 
 aside {
@@ -149,8 +153,4 @@ h1.title {
 
 p {
 	font-size: 24px;
-}
-
-aside {
-	width: 340px;
 }
