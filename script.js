@@ -23,6 +23,9 @@ function() {
             $(this).addClass('icon-play');
         }
 
-    });
+        aud[0].ontimeupdate = function() {
+        	$('.progress').css('width', aud[0].currentTime / aud[0].duration * 100 + '%')
+    	}
+    })
 
 })
