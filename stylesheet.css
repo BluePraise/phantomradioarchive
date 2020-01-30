@@ -1,4 +1,3 @@
-
 /*************************
 *
 * BASE ELEMENTS
@@ -9,16 +8,14 @@
 *,
 *:after,
 *:before {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
-html {
-
-}
+html {}
 
 body {
     font-family: "Times New Roman", Serif;
@@ -26,11 +23,36 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  	margin: 0;
 }
 
-html, body {
+html,
+body {}
 
+header {}
+
+main {}
+
+section {}
+
+aside {
+	padding: 40px;
 }
+
+footer {}
+
+ul {
+	list-style: none;
+	padding: none;
+	margin: none;
+}
+
+ol {}
+
+li {}
 
 
 /*************************
@@ -39,37 +61,26 @@ html, body {
 *
 *************************/
 
-h1, h2, h3, h4, h5, {
+h1,
+h2,
+h3,
+h4,
+h5,
+    {}
 
-}
+h1 {}
 
-h1 {
+h2 {}
 
-}
+h3 {}
 
-h2 {
+h4 {}
 
-}
+h5 {}
 
-h3 {
+a {}
 
-}
-
-h4 {
-
-}
-
-h5 {
-
-}
-
-a {
-
-}
-
-blockquote {
-
-}
+blockquote {}
 
 strong {}
 
@@ -82,24 +93,64 @@ i {}
 *
 *************************/
 
-svg, img {
+svg,
+img {
     max-width: 100%;
     height: auto;
 }
 
 
-img {
+img {}
 
+svg {}
+
+figure {}
+
+video {}
+
+/*************************
+*
+* A GRID or LAYOUT
+*
+*************************/
+
+.wrapper {
+	display: flex;
 }
 
-svg {
-
+main {
+	width: 75%;
 }
 
-figure {
-
+aside {
+	width: 25%;
 }
 
-video {
 
+/*************************
+*
+* DESIGN SPECIFIC STUFF
+*
+*************************/
+
+
+.branding {
+  	text-align: center;
+}
+
+.logo svg {
+	width: 70%; /* change the % to change the size of the logo */
+  	height: auto;
+}
+
+h1.title {
+	font-weight: normal;
+}
+
+p {
+	font-size: 24px;
+}
+
+aside {
+	width: 340px;
 }
