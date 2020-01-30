@@ -154,3 +154,24 @@ h1.title {
 p {
 	font-size: 24px;
 }
+
+/* audio player */
+
+.playlist li {
+	display: inline-flex;
+	width: 100%;
+}
+
+
+.icon-play {
+	width: 0;
+	height: 0;
+	border-left: 30px solid #0000;
+  	border-right: 30px solid #0000;
+  	border-bottom: 45px solid #000;
+  	transform: rotate(90deg);
+}
+
+audio::-webkit-media-controls-enclosure {
+	background: none;
+}
