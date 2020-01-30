@@ -172,6 +172,13 @@ p {
   	transform: rotate(90deg);
 }
 
+.icon-pause {
+	width: 70px;
+	height: 70px;
+	border-style: double;
+  	border-width: 0px 0 0px 37px;
+}
+
 audio::-webkit-media-controls-enclosure {
 	background: none;
 }

@@ -10,4 +10,3 @@ This is the sourcecode of phantom radio archive.
 
 ## Sources
 The base template for this is based off my [blank static template](https://github.com/BluePraise/blank-static-html)
-Sound sessions were possible because of [Mediaelement](http://www.mediaelementjs.com/)

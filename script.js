@@ -5,11 +5,11 @@ $(
   if (aud.paused) {
     aud.play();
     $('.play-pause').removeClass('icon-play');
-    $('.play-pause').addClass('icon-stop');
+    $('.play-pause').addClass('icon-pause');
   }
   else {
     aud.pause();
-    $('.play-pause').removeClass('icon-stop');
+    $('.play-pause').removeClass('icon-pause');
     $('.play-pause').addClass('icon-play');
   }
 
