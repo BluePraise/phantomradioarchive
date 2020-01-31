@@ -120,6 +120,17 @@ video {}
 	display: flex;
 }
 
+/* this has been set up for the loadfile.html */
+.container {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #000;
+	padding: 40px;
+	margin: auto;
+	align-items: center;
+	width: 500px;
+}
+
 main {
 	width: 75%;
   	border: 1px solid #000;
