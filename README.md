@@ -1,12 +1,12 @@
 # phantomradioarchive
 This is the sourcecode of phantom radio archive.
+It was made by Magalie Chetrit. If you have any questions, you can always contact me through 0652841683 or my e-mail maggie@magalielinda.me
 
-## instructions
+At first we decided to keep everything simple. It is my intention to build a custom mini-CMS behind it to provide a better managament for adding new radio sessions.
 
-## To-Do and notes
+## General advice and suggestions
 
-- Times as a font - for not I've used Serif and Times New Roman. Have to figure it out on Tuesday
-- What are the width's of the main and the aside?
+
 
 ## Sources
 The base template for this is based off my [blank static template](https://github.com/BluePraise/blank-static-html)

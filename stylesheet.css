@@ -177,6 +177,7 @@ p {
 
 .session--info {
 	padding-left: 40px;
+    flex-grow: 2;
 }
 
 .session--title {
@@ -186,12 +187,22 @@ p {
 
 .playlist li {
 	display: flex;
+    flex-wrap: wrap;
 	width: 100%;
 	border-top: 1px solid;
 }
 
 .playlist li:last-child {
     border-bottom: 1px solid;
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+    margin-left: 74px;
+    padding-left: 40px;
+    padding-right: 140px;
+    border-left: 1px solid;
 }
 
 /* audio player */
@@ -235,7 +246,7 @@ audio.player {
   	background-color: #000;
   	top: 50px;
   	left: 650px;
- }
+}
 
 a.button {
     text-align: center;
