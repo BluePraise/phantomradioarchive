@@ -117,7 +117,12 @@ video {}
 *************************/
 
 .wrapper {
-	display: flex;
+    background-image: url('bg.jpg');
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+	display: grid;
+    grid-template-columns: auto 300px;
 }
 
 /* this has been set up for the loadfile.html */
@@ -132,12 +137,14 @@ video {}
 }
 
 main {
-	width: 75%;
   	border: 1px solid #000;
 }
 
 aside {
-	width: 25%;
+    position: sticky;
+    height: 100vh;
+    right: 0;
+    top: 0;
 }
 
 
@@ -162,7 +169,7 @@ h1.title {
 }
 
 p {
-	font-size: 24px;
+	font-size: 16px;
 }
 
 
@@ -173,8 +180,8 @@ p {
 }
 
 .session--title {
-	font-size: 24px;
-	line-height: 100px;
+	font-size: 16px;
+	line-height: 61px;
 }
 
 .playlist li {
@@ -183,28 +190,35 @@ p {
 	border-top: 1px solid;
 }
 
+.playlist li:last-child {
+    border-bottom: 1px solid;
+}
+
 /* audio player */
+
+.playbar {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+}
 
 audio.player {
 	display: none;
 }
 
 .play-toggle {
-	 margin-left: 40px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-right: 10px;
+	margin-left: 30px;
 	margin-right: 0px;
 	border-right: 1px solid #000;
 }
 
 .icon-play {
-	width: 45px;
-  	height: 60px;
-	border-left: 30px solid #0000;
-  	border-right: 30px solid #0000;
-  	border-bottom: 45px solid #000;
-  	transform: rotate(90deg);
+	width: 44px;
+    height: 61px;
+    border-left: 22px solid #0000;
+    border-right: 22px solid #0000;
+    border-bottom: 34px solid #000;
+    transform: rotate(90deg)
 }
 
 .icon-pause {
@@ -223,6 +237,17 @@ audio.player {
   	left: 650px;
  }
 
-/*audio::-webkit-media-controls-enclosure {
-	background: none;
-}*/
+a.button {
+    text-align: center;
+    border: 1px solid;
+    padding: 20px 20px;
+    color: #000;
+    border-radius: 18px;
+    bottom: 290px;
+    position: absolute;
+    text-decoration: none;
+}
+
+.button.two {
+    bottom: 200px;
+}
