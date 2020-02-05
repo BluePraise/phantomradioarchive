@@ -1,4 +1,14 @@
 $( document ).ready(function() {
+
+    var allAudio = $('audio');
+
+    //for all the audio
+    allAudio.each(function(i) {
+        // get the duration (length) of each track
+        console.log( i + ": " + $(this) );
+    });
+
+
 	$('.play-pause').on('click', function(e) {
 		e.preventDefault();
 		// get the list-item of the element that
@@ -21,7 +31,8 @@ $( document ).ready(function() {
         }
 
         aud[0].ontimeupdate = function() {
-        	$('.progress').css('width', aud[0].currentTime / aud[0].duration * 100 + '%')
+        	$('.progress').css('width', aud[0].currentTime / aud[0].duration * 100 + '%');
+            // console.log(aud[0].duration);
     	}
     })
 
