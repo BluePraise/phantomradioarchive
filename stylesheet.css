@@ -176,7 +176,9 @@ p {
 /* sessions */
 
 .session--info {
+    position: relative;
 	padding-left: 40px;
+    border-left: 1px solid #000;
     flex-grow: 2;
 }
 
@@ -196,10 +198,36 @@ p {
     border-bottom: 1px solid;
 }
 
+/* accordion. It has the same triangle as the play button */
+
+.accordion--toggle {
+    background-color: transparent;
+    padding: 0;
+    border-left: 22px solid #0000;
+    border-right: 22px solid #0000;
+    border-bottom: 34px solid #000;
+    transform: rotate(180deg); /* Point down */
+    margin-top: 16px;
+    margin-right: 26px;
+}
+
+.accordion--toggle.active{
+    transform: rotate(0deg) translate(0px, -14px); /* Point up */
+}
+
+.accordion--toggle:hover {
+    cursor: pointer;
+}
+
+.accordion--toggle:focus {
+    outline: none;
+}
+
+/* The panel is not shown by default */
 .panel {
     display: none;
     overflow: hidden;
-    margin-left: 74px;
+    margin-left: 69px;
     padding-left: 40px;
     padding-right: 140px;
     border-left: 1px solid;
@@ -218,34 +246,36 @@ audio.player {
 }
 
 .play-toggle {
-	margin-left: 30px;
-	margin-right: 0px;
-	border-right: 1px solid #000;
+	padding-left: 20px;
+    padding-right: 5px;
+    border-bottom: 1px solid;
+    margin-bottom: -1px; /* to compensate for the border from the panel */
 }
 
 .icon-play {
-	width: 44px;
-    height: 61px;
     border-left: 22px solid #0000;
     border-right: 22px solid #0000;
     border-bottom: 34px solid #000;
-    transform: rotate(90deg)
+    transform: rotate(90deg) translate(14px, 5px);
 }
 
 .icon-pause {
-	width: 60px;
-	height: 60px;
-	border-style: double;
-  	border-width: 0px 0 0px 37px;
+	width: 44px;
+    height: 40px;
+    border-style: double;
+    border-width: 0px 0 0px 27px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 17px;
 }
 
 .progress {
   	position: absolute;
-  	width: 190px;
-  	height: 1px;
-  	background-color: #000;
-  	top: 50px;
-  	left: 650px;
+    width: 190px;
+    height: 1px;
+    background-color: #000;
+    top: 30px;
+    left: 530px;
 }
 
 a.button {
