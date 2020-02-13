@@ -36,7 +36,7 @@ $( document ).ready(function() {
     	}
     })
 
-
+    // ACCORDION
     $('.accordion--toggle').on('click', function(){
         $(this).toggleClass('active');
         $(this).next().toggle();
