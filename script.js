@@ -1,11 +1,20 @@
 $( document ).ready(function() {
 
-    var allAudio = $('audio');
+    //get the duration of every aduiotrack and output it near the prgressbar
 
-    //for all the audio
-    allAudio.each(function(i) {
-        // get the duration (length) of each track
-        console.log( i + ": " + $(this) );
+
+    var session = $('.playlist li');
+    session.each(function(i) {
+
+        // get every audio in the list item;
+        var a = $(this).find('audio');
+        var duration = a[0].duration;
+
+        // 97.461182 << parse these seconds into minutes
+        var newDuration = convertTime(duration);
+
+        time = $(this).find('.time');
+        time.append(newDuration);
     });
 
 
@@ -31,7 +40,7 @@ $( document ).ready(function() {
         }
 
         aud[0].ontimeupdate = function() {
-        	$('.progress').css('width', aud[0].currentTime / aud[0].duration * 100 + '%');
+        	$('.progress-cursor').css('left', aud[0].currentTime / aud[0].duration * 100 + '%');
             // console.log(aud[0].duration);
     	}
     })
@@ -43,6 +52,23 @@ $( document ).ready(function() {
         /* added a border with JS, because don't know how to do it in css */
         $(this).next().css( 'border-top','1px solid' );
     });
+
+
+    // STOLEN FROM : https://www.tutorialspoint.com/How-to-convert-JavaScript-seconds-to-minutes-and-seconds
+    // Adapted to suit my needs
+    function convertTime(duration) {
+        var hr = ~~(duration / 3600);
+        var min = ~~((duration % 3600) / 60);
+        var sec = ~~(duration % 60);
+        var sec_min = "";
+
+            if (hr > 0) {
+               sec_min += "" + hrs + ":" + (min < 10 ? "0" : "");
+            }
+            sec_min += "" + min + ":" + (sec < 10 ? "0" : "");
+            sec_min += "" + sec;
+            return sec_min;
+         }
 })
 
 

@@ -186,6 +186,7 @@ p {
 .session--title {
 	font-size: 16px;
 	align-self: center;
+    width: 100%;
 }
 
 .playlist li {
@@ -241,9 +242,12 @@ p {
     margin-bottom: 30px;
     border-bottom: 1px solid;
 }
+/*audio {
+    display: block;
+}*/
 
 audio.player {
-    /*display: none;*/
+    display: none;
     outline: none;
 }
 audio.player::focus {
@@ -281,14 +285,25 @@ audio::-moz-media-controls-enclosure {
     padding-right: 17px;
 }
 
-/*.progress {
-  	position: absolute;
-    width: 190px;
+.player {
+  	align-self: center;
+    width: 200px;
+
+}
+.progress {
+    position: relative;
+    width: 200px;
     height: 1px;
     background-color: #000;
-    top: 30px;
-    left: 530px;
-}*/
+}
+.progress-cursor {
+    position: absolute;
+    top: -9px;
+    left: 0;
+    width: 1px;
+    height: 20px;
+    background-color: #000;
+}
 
 a.button {
     text-align: center;
