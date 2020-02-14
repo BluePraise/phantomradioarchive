@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
     //get the duration of every aduiotrack and output it near the prgressbar
-
+    console.clear;
 
     var session = $('.playlist li');
     session.each(function(i) {
@@ -13,8 +13,8 @@ $( document ).ready(function() {
         // 97.461182 << parse these seconds into minutes
         var newDuration = convertTime(duration);
 
-        time = $(this).find('.time');
-        time.append(newDuration);
+        durationTime = $(this).find('.time');
+        durationTime.append(newDuration);
     });
 
 
@@ -25,6 +25,8 @@ $( document ).ready(function() {
 		li = $(this).closest('li');
 		// find the audio of the targeted li
 		aud = li.find('audio');
+
+        var cursor = li.find('.progress-cursor');
 
 		// if the audio is paused, play the audio
 		if (aud[0].paused) {
@@ -40,9 +42,8 @@ $( document ).ready(function() {
         }
 
         aud[0].ontimeupdate = function() {
-        	$('.progress-cursor').css('left', aud[0].currentTime / aud[0].duration * 100 + '%');
-            // console.log(aud[0].duration);
-    	}
+            cursor.css('left', aud[0].currentTime / aud[0].duration * 100 + '%');
+        }
     })
 
     // ACCORDION
@@ -68,8 +69,10 @@ $( document ).ready(function() {
             sec_min += "" + min + ":" + (sec < 10 ? "0" : "");
             sec_min += "" + sec;
             return sec_min;
-         }
-})
+    }
+
+
+});
 
 
 

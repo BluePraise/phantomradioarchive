@@ -176,8 +176,9 @@ p {
 /* sessions */
 
 .session--info {
-    display: inline-flex;
+    display: flex;
     position: relative;
+    margin: auto;
 	padding-left: 40px;
     border-left: 1px solid #000;
     flex-grow: 2;
@@ -287,14 +288,18 @@ audio::-moz-media-controls-enclosure {
 
 .player {
   	align-self: center;
-    width: 200px;
-
+    width: 400px;
+    height: 100%;
+    padding-bottom: 3px;
 }
 .progress {
+    display: inline-block;
     position: relative;
+    vertical-align: middle;
     width: 200px;
     height: 1px;
     background-color: #000;
+
 }
 .progress-cursor {
     position: absolute;
@@ -303,6 +308,12 @@ audio::-moz-media-controls-enclosure {
     width: 1px;
     height: 20px;
     background-color: #000;
+}
+
+.time {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
 }
 
 a.button {
