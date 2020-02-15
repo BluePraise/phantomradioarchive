@@ -247,11 +247,11 @@ p {
     display: block;
 }*/
 
-audio.player {
+audio.session {
     display: none;
     outline: none;
 }
-audio.player::focus {
+audio.session::focus {
     outline: none;
 }
 
@@ -288,7 +288,7 @@ audio::-moz-media-controls-enclosure {
 
 .player {
   	align-self: center;
-    width: 400px;
+    width: 550px;
     height: 100%;
     padding-bottom: 3px;
 }
@@ -299,7 +299,7 @@ audio::-moz-media-controls-enclosure {
     width: 200px;
     height: 1px;
     background-color: #000;
-
+    cursor: crosshair;
 }
 .progress-cursor {
     position: absolute;
@@ -310,7 +310,11 @@ audio::-moz-media-controls-enclosure {
     background-color: #000;
 }
 
-.time {
+.time--current {
+    display: inline-block;
+    margin-right: 20px;
+}
+.time--duration {
     display: inline-block;
     vertical-align: middle;
     margin-left: 20px;
