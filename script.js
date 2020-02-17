@@ -35,22 +35,9 @@ $( window ).on( "load", function() {
         var newctime = convertTime(ctime);
         tc[i].append(newctime);
 
-        //Let's add an event listener to each progressbar
-        var progress = $(this).find('.progress');
-        progress.on('click', function(e) {
-
-            // calculate the normalized position clicked
-            var clickPosition = (e.pageX  - this.offsetLeft) / this.offsetWidth;
-            var clickTime = clickPosition * t[0].duration;
-
-            // move the playhead to the correct position
-            t[0].currentTime = clickTime;
-        });
-
     });
 
 });
-
 
 
 $( document ).ready(function(e) {
@@ -86,8 +73,22 @@ $( document ).ready(function(e) {
 
         aud[0].ontimeupdate = function() {
             cursor.css('left', aud[0].currentTime / aud[0].duration * 100 + '%');
-            // divCurrentTime.append(convertedCurrentPlayTime);
+            divCurrentTime.empty('');
+            divCurrentTime.append(convertedCurrentPlayTime);
         }
+
+        //Let's add an event listener to each progressbar
+        var progress = $(this).find('.progress');
+        progress.on('click', function(e) {
+
+            // calculate the normalized position clicked
+            var clickPosition = (e.pageX  - this.offsetLeft) / this.offsetWidth;
+            var clickTime = clickPosition * t[0].duration;
+            console.log(clickTime);
+
+            // move the playhead to the correct position
+            t[0].currentTime = clickTime;
+        });
 
     })
 
