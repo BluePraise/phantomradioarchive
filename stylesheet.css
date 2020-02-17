@@ -180,7 +180,6 @@ p {
     position: relative;
     margin: auto;
 	padding-left: 40px;
-    border-left: 1px solid #000;
     flex-grow: 2;
 }
 
@@ -201,21 +200,20 @@ p {
     border-bottom: 1px solid;
 }
 
-/* accordion. It has the same triangle as the play button */
-
 .accordion--toggle {
-    background-color: transparent;
+    background: transparent;
+    border: none;
+}
+
+.accordion--toggle .toggle-icon {
     padding: 0;
-    border-left: 22px solid #0000;
-    border-right: 22px solid #0000;
-    border-bottom: 34px solid #000;
-    transform: rotate(180deg); /* Point down */
-    margin-top: 16px;
-    margin-right: 26px;
+    width: 34px;
+    transform: rotate(90deg); /* Point down */
+    vertical-align: middle;
 }
 
 .accordion--toggle.active{
-    transform: rotate(0deg) translate(0px, -14px); /* Point up */
+    transform: rotate(-180deg); /* Point down */
 }
 
 .accordion--toggle:hover {
@@ -230,8 +228,7 @@ p {
 .panel {
     display: none;
     overflow: hidden;
-    margin-left: 69px;
-    padding-left: 40px;
+    padding-left: 95px;
     padding-right: 140px;
     border-left: 1px solid;
 }
@@ -262,28 +259,18 @@ audio::-moz-media-controls-enclosure {
 }
 
 .play-toggle {
-	padding-left: 20px;
-    padding-right: 5px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid;
-    margin-bottom: -1px; /* to compensate for the border from the panel */
+	padding: 10px;
+    border-right: 1px solid;
 }
 
-.icon-play {
-    border-left: 22px solid #0000;
-    border-right: 22px solid #0000;
-    border-bottom: 34px solid #000;
-    transform: rotate(90deg) translate(10px, 5px);
+.play-pause {
+    vertical-align: middle;
+    width: 34px;
+    height: 34px;
 }
 
 .icon-pause {
-	width: 44px;
-    height: 40px;
-    border-style: double;
-    border-width: 0px 0 0px 27px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-right: 17px;
+    display: none;
 }
 
 .player {
@@ -334,3 +321,4 @@ a.button {
 .button.two {
     bottom: 200px;
 }
+/**/

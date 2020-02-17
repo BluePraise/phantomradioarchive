@@ -57,18 +57,20 @@ $( document ).ready(function(e) {
         var cursor = li.find('.progress-cursor');
         var currentPlayTime = aud[0].currentTime;
         var convertedCurrentPlayTime = convertTime(currentPlayTime);
+        var play = li.find('.icon-play');
+        var pause = li.find('.icon-pause');
 
 		// if the audio is paused, play the audio
 		if (aud[0].paused) {
             aud[0].play();
-            $(this).removeClass('icon-play');
-            $(this).addClass('icon-pause');
+            play.hide();
+            pause.show();
         }
         // else pause it.
         else {
             aud[0].pause();
-            $(this).removeClass('icon-pause');
-            $(this).addClass('icon-play');
+            pause.hide();
+            play.show();
         }
 
         aud[0].ontimeupdate = function() {
