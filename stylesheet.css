@@ -26,7 +26,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 0;
-  	margin: 0;
+    margin: 0;
 }
 
 html,
@@ -39,22 +39,20 @@ main {}
 section {}
 
 aside {
-	padding: 40px;
+    padding: 40px;
 }
 
 footer {}
 
 ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 ol {}
 
-li {
-
-}
+li {}
 
 
 /*************************
@@ -121,23 +119,23 @@ video {}
     background-position: center center;
     background-size: 100%;
     background-repeat: no-repeat;
-	display: grid;
+    display: grid;
     grid-template-columns: auto 300px;
 }
 
 /* this has been set up for the loadfile.html */
 .container {
-	display: flex;
-	flex-direction: column;
-	border: 1px solid #000;
-	padding: 40px;
-	margin: auto;
-	align-items: center;
-	width: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    padding: 40px;
+    margin: auto;
+    align-items: center;
+    width: 500px;
 }
 
 main {
-  	border: 1px solid #000;
+    border: 1px solid #000;
 }
 
 aside {
@@ -156,20 +154,21 @@ aside {
 
 
 .branding {
-  	text-align: center;
+    text-align: center;
 }
 
 .logo svg {
-	width: 70%; /* change the % to change the size of the logo */
-  	height: auto;
+    width: 70%;
+    /* change the % to change the size of the logo */
+    height: auto;
 }
 
 h1.title {
-	font-weight: normal;
+    font-weight: normal;
 }
 
 p {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 
@@ -177,23 +176,24 @@ p {
 
 .session--info {
     display: flex;
+    justify-content: space-between;
     position: relative;
     margin: auto;
-	padding-left: 40px;
+    padding-left: 20px;
     flex-grow: 2;
 }
 
 .session--title {
-	font-size: 16px;
-	align-self: center;
+    font-size: 16px;
+    align-self: center;
     width: 100%;
 }
 
 .playlist li {
-	display: flex;
+    display: flex;
     flex-wrap: wrap;
-	width: 100%;
-	border-top: 1px solid;
+    width: 100%;
+    border-top: 1px solid;
 }
 
 .playlist li:last-child {
@@ -208,12 +208,14 @@ p {
 .accordion--toggle .toggle-icon {
     padding: 0;
     width: 34px;
-    transform: rotate(90deg); /* Point down */
+    transform: rotate(90deg);
+    /* Point down */
     vertical-align: middle;
 }
 
-.accordion--toggle.active{
-    transform: rotate(-180deg); /* Point down */
+.accordion--toggle.active {
+    transform: rotate(-180deg);
+    /* Point down */
 }
 
 .accordion--toggle:hover {
@@ -228,7 +230,8 @@ p {
 .panel {
     display: none;
     overflow: hidden;
-    padding-left: 95px;
+    width: 100%;
+    padding-left: 75px;
     padding-right: 140px;
     border-left: 1px solid;
 }
@@ -240,6 +243,7 @@ p {
     margin-bottom: 30px;
     border-bottom: 1px solid;
 }
+
 /*audio {
     display: block;
 }*/
@@ -248,6 +252,7 @@ audio.session {
     display: none;
     outline: none;
 }
+
 audio.session::focus {
     outline: none;
 }
@@ -259,7 +264,7 @@ audio::-moz-media-controls-enclosure {
 }
 
 .play-toggle {
-	padding: 10px;
+    padding: 10px;
     border-right: 1px solid;
 }
 
@@ -274,33 +279,103 @@ audio::-moz-media-controls-enclosure {
 }
 
 .player {
-  	align-self: center;
-    width: 550px;
+    align-self: center;
+    width: 100%;
     height: 100%;
+    text-align: right;
     padding-bottom: 3px;
 }
-.progress {
+
+.progress-bar {
     display: inline-block;
     position: relative;
+}
+
+.progress {
+    display: inline-block;
     vertical-align: middle;
-    width: 200px;
-    height: 1px;
+    height: 3px;
     background-color: #000;
     cursor: crosshair;
+    border: none;
 }
+
 .progress-cursor {
     position: absolute;
-    top: -9px;
     left: 0;
     width: 1px;
     height: 20px;
     background-color: #000;
 }
 
+
+/* SLIDE STYLING */
+input[type=range] {
+    -webkit-appearance: none;
+    /* Hides the slider so that custom slider can be made */
+    width: 100%;
+    /* Specific width is required for Firefox. */
+    background: transparent;
+    /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+    /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: crosshair;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid;
+    height: 20px;
+    width: 1px;
+    background: #000;
+    cursor: crosshair;
+    margin-top: -14px;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+    border: 1px solid;
+    height: 20px;
+    width: 1px;
+    background: #000;
+    cursor: crosshair;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+    border: 1px solid;
+    height: 20px;
+    width: 1px;
+    background: #000;
+    cursor: crosshair;
+}
+
+
+
 .time--current {
     display: inline-block;
     margin-right: 20px;
 }
+
 .time--duration {
     display: inline-block;
     vertical-align: middle;
@@ -313,12 +388,13 @@ a.button {
     padding: 20px 20px;
     color: #000;
     border-radius: 18px;
-    bottom: 290px;
     position: absolute;
+    top: 420px;
     text-decoration: none;
 }
 
 .button.two {
-    bottom: 200px;
+    top: 510px;
 }
+
 /**/
