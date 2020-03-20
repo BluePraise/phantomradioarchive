@@ -3,9 +3,8 @@ $( document ).ready(function(e) {
     Amplitude.init({
         "songs": [
           {
-            "url": "../sessions/15.11.2018/phantomradio",
-            "url": "../sessions/audiofile.mp3",
-            "url": "../sessions/audiofile.mp3",
+            "url": "./audio/audiofile.mp3",
+            "url": "../audio/outfoxing.mp3"
           }
         ],
         debug: true
