@@ -115,7 +115,7 @@ video {}
 *************************/
 
 .wrapper {
-    background-image: url('bg.jpg');
+    background-image: url('/img/bg.jpg');
     background-position: center center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -124,14 +124,22 @@ video {}
 }
 
 /* this has been set up for the loadfile.html */
+.container-s,
 .container {
     display: flex;
     flex-direction: column;
-    border: 1px solid #000;
-    padding: 40px;
     margin: auto;
+    padding: 20px 0;
     align-items: center;
+}
+.container-s {
+    padding: 40px;
     width: 500px;
+}
+
+.inline-flex {
+    display: inline-flex;
+    flex-direction: column;
 }
 
 main {
@@ -165,6 +173,10 @@ aside {
 
 h1.title {
     font-weight: normal;
+}
+
+.page-title {
+    text-align: center;
 }
 
 p {
@@ -396,5 +408,51 @@ a.button {
 .button.two {
     top: 510px;
 }
+.button.three {
+    top: 590px;
+}
 
+/* LOGIN */
+.page-login {
+    margin-top: 30px;
+}
+.login {
+    border: 1px solid #000;
+    padding: 50px;
+    /*padding: 80px;*/
+/*    position: fixed;
+    z-index: 100;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: white;*/
+}
+
+.login .inline-flex {
+    align-items: flex-end;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+#loginform {
+    margin: 50px 130px;
+}
+.login input {
+    padding: 7px 5px !important;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid black;
+    outline-color: #00ff5e;
+}
+
+.login input[type=text]
+.login input[type=password], {
+    /*width: 200px;*/
+}
+
+.login input[type=submit] {
+    padding: 7px 20px;
+}
 /**/

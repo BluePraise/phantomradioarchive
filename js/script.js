@@ -7,7 +7,7 @@ $( document ).ready(function(e) {
             "url": "../audio/outfoxing.mp3"
           }
         ],
-        debug: true
+        debug: false
     });
 
 	$('.play-toggle').on('click', function(e) {
@@ -27,6 +27,7 @@ $( document ).ready(function(e) {
         }
 
     });
+    monitorLogin();
 
 
     // ACCORDION
